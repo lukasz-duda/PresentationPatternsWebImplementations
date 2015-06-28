@@ -16,6 +16,8 @@ function ExpensesViewModel() {
 	} ];
 
 	me.type = ko.observable();
+	// Only the information required by view remains,
+	// but now the view model has direct dependency on Knockout library.
 
 	me.addExpense = function() {
 		var newExpense = {

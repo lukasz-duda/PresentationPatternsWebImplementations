@@ -7,6 +7,7 @@
 <script src="../sinon-server-1.15.4.js"></script>
 <script src="../FakeApplication.js"></script>
 <script src="knockout-3.3.0.js"></script>
+<!-- New 56 kB dependency causes slower loading from server in comparison to simplest HTML DOM implementation. -->
 <script src="UseCase.js"></script>
 </head>
 <body>
@@ -17,6 +18,7 @@
 				data-bind="value: type, options: types, optionsText: 'text'"></select>
 		</div>
 		<button data-bind="click: addExpense">Add</button>
+		<!-- In the simple case there is no need for type which job is to separate view logic from presenter, but the view and view model are polluted with library dependent bindings -->
 	</fieldset>
 	<script src="ExpensesViewModel.js"></script>
 </body>
