@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Expenses</title>
+<link rel="stylesheet" type="text/css" href="Expenses.css" />
+<script src="../sinon-server-1.15.4.js"></script>
+<script src="../FakeApplication.js"></script>
+<script src="knockout-3.3.0.js"></script>
+<script src="UseCase.js"></script>
+</head>
+<body>
+	<fieldset>
+		<legend>New expense</legend>
+		<div class="field">
+			<label for="type">Type</label> <select
+				data-bind="value: type, options: types, optionsText: 'text'"></select>
+		</div>
+		<button data-bind="click: addExpense">Add</button>
+	</fieldset>
+	<script src="ExpensesViewModel.js"></script>
+</body>
+</html>
